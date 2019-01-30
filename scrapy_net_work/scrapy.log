@@ -1,0 +1,307 @@
+2019-01-25 15:02:31 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 15:02:31 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 15:02:31 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 15:02:31 middleware.py 53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy_net_work.extensions.MysqlUtil']
+2019-01-25 15:02:31 middleware.py 53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy_net_work.middlewares.HttpSetProxy',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-25 15:02:31 middleware.py 53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-25 15:02:31 middleware.py 53 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-01-25 15:02:31 engine.py 256 [scrapy.core.engine] INFO: Spider opened
+2019-01-25 15:02:31 logstats.py 48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-25 15:06:38 extensions.py 44 [root] INFO: 连接数据库
+2019-01-25 15:06:38 signal.py 57 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method MysqlUtil.spider_opend of <scrapy_net_work.extensions.MysqlUtil object at 0x000001246F267940>>
+Traceback (most recent call last):
+  File "E:\study\soft\anaconda\lib\site-packages\twisted\internet\defer.py", line 151, in maybeDeferred
+    result = f(*args, **kw)
+  File "E:\study\soft\anaconda\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "E:\study\tarena_code\AID1803\vinkon\my_crawler\scrapy_project\scrapy_net_work\scrapy_net_work\extensions.py", line 49, in spider_opend
+    passwd=self.sql_setting.passwd
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\connections.py", line 325, in __init__
+    self.connect()
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\connections.py", line 599, in connect
+    self._request_authentication()
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\connections.py", line 846, in _request_authentication
+    data += self.db + b'\0'
+TypeError: unsupported operand type(s) for +: 'int' and 'bytes'
+2019-01-25 15:06:39 telnet.py 60 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-01-25 15:06:39 logstats.py 48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-25 15:06:39 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/3/> (referer: None)
+2019-01-25 15:06:39 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/4/> (referer: None)
+2019-01-25 15:08:18 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 15:08:18 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 15:08:18 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 15:08:18 middleware.py 53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy_net_work.extensions.MysqlUtil']
+2019-01-25 15:08:18 middleware.py 53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy_net_work.middlewares.HttpSetProxy',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-25 15:08:18 middleware.py 53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-25 15:08:18 middleware.py 53 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-01-25 15:08:18 engine.py 256 [scrapy.core.engine] INFO: Spider opened
+2019-01-25 15:08:18 logstats.py 48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-25 15:08:50 extensions.py 44 [root] INFO: 连接数据库
+2019-01-25 15:08:58 signal.py 57 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method MysqlUtil.spider_opend of <scrapy_net_work.extensions.MysqlUtil object at 0x000002367D8D5A20>>
+Traceback (most recent call last):
+  File "E:\study\soft\anaconda\lib\site-packages\twisted\internet\defer.py", line 151, in maybeDeferred
+    result = f(*args, **kw)
+  File "E:\study\soft\anaconda\lib\site-packages\pydispatch\robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "E:\study\tarena_code\AID1803\vinkon\my_crawler\scrapy_project\scrapy_net_work\scrapy_net_work\extensions.py", line 49, in spider_opend
+    passwd=self.sql_setting.passwd
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\connections.py", line 325, in __init__
+    self.connect()
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\connections.py", line 599, in connect
+    self._request_authentication()
+  File "E:\study\soft\anaconda\lib\site-packages\pymysql\connections.py", line 846, in _request_authentication
+    data += self.db + b'\0'
+TypeError: unsupported operand type(s) for +: 'int' and 'bytes'
+2019-01-25 15:08:58 telnet.py 60 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
+2019-01-25 15:08:59 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/3/> (referer: None)
+2019-01-25 15:08:59 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/4/> (referer: None)
+2019-01-25 15:14:43 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 15:14:43 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 15:14:43 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 15:14:43 middleware.py 53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy_net_work.extensions.MysqlUtil']
+2019-01-25 15:14:43 middleware.py 53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy_net_work.middlewares.HttpSetProxy',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-25 15:14:43 middleware.py 53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-25 15:14:43 middleware.py 53 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-01-25 15:14:43 engine.py 256 [scrapy.core.engine] INFO: Spider opened
+2019-01-25 15:14:43 logstats.py 48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-25 15:14:45 extensions.py 45 [root] INFO: 连接数据库
+2019-01-25 15:14:58 telnet.py 60 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
+2019-01-25 15:14:58 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/3/> (referer: None)
+2019-01-25 15:14:58 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/4/> (referer: None)
+2019-01-25 15:15:02 scraper.py 237 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.mzitu.com/xinggan/page/3/>
+{'image_urls': ['https://i.meizitu.net/pfiles/img/lazy.png']}
+2019-01-25 15:15:04 scraper.py 237 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.mzitu.com/xinggan/page/4/>
+{'image_urls': ['https://i.meizitu.net/pfiles/img/lazy.png']}
+2019-01-25 15:15:04 engine.py 295 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-01-25 15:15:08 extensions.py 56 [root] INFO: 关闭数据库连接
+2019-01-25 15:15:08 statscollectors.py 47 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 454,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 11502,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 1, 25, 7, 15, 4, 909988),
+ 'item_scraped_count': 2,
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 9,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2019, 1, 25, 7, 14, 43, 358121)}
+2019-01-25 15:15:08 engine.py 326 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-01-25 15:19:57 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 15:19:57 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 15:19:57 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 15:19:57 middleware.py 53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy_net_work.extensions.MysqlUtil']
+2019-01-25 15:19:57 middleware.py 53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy_net_work.middlewares.HttpSetProxy',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-25 15:19:57 middleware.py 53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-25 15:19:57 middleware.py 53 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-01-25 15:19:57 engine.py 256 [scrapy.core.engine] INFO: Spider opened
+2019-01-25 15:19:57 logstats.py 48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-25 15:20:14 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 15:20:14 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 15:20:14 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 15:20:22 warnings.py 99 [py.warnings] WARNING: E:\study\soft\pycharm\PyCharm Community Edition 2018.2.3\helpers\pydev\_pydevd_bundle\pydevd_resolver.py:166: ScrapyDeprecationWarning: Crawler.spiders is deprecated, use CrawlerRunner.spider_loader or instantiate scrapy.spiderloader.SpiderLoader with your settings.
+  attr = getattr(var, n)
+
+2019-01-25 15:29:53 warnings.py 99 [py.warnings] WARNING: E:\study\soft\pycharm\PyCharm Community Edition 2018.2.3\helpers\pydev\_pydevd_bundle\pydevd_resolver.py:166: ScrapyDeprecationWarning: `Settings.defaults` attribute is deprecated and won't be supported in Scrapy 0.26, use `Settings.set(name, value, priority='default')` instead
+  attr = getattr(var, n)
+
+2019-01-25 15:29:53 warnings.py 99 [py.warnings] WARNING: E:\study\soft\pycharm\PyCharm Community Edition 2018.2.3\helpers\pydev\_pydevd_bundle\pydevd_resolver.py:166: ScrapyDeprecationWarning: `Settings.overrides` attribute is deprecated and won't be supported in Scrapy 0.26, use `Settings.set(name, value, priority='cmdline')` instead
+  attr = getattr(var, n)
+
+2019-01-25 15:29:53 warnings.py 99 [py.warnings] WARNING: E:\study\soft\pycharm\PyCharm Community Edition 2018.2.3\helpers\pydev\_pydevd_bundle\pydevd_resolver.py:71: ScrapyDeprecationWarning: `Settings.defaults` attribute is deprecated and won't be supported in Scrapy 0.26, use `Settings.set(name, value, priority='default')` instead
+  return getattr(var, attribute)
+
+2019-01-25 15:29:53 warnings.py 99 [py.warnings] WARNING: E:\study\soft\pycharm\PyCharm Community Edition 2018.2.3\helpers\pydev\_pydevd_bundle\pydevd_resolver.py:71: ScrapyDeprecationWarning: `Settings.overrides` attribute is deprecated and won't be supported in Scrapy 0.26, use `Settings.set(name, value, priority='cmdline')` instead
+  return getattr(var, attribute)
+
+2019-01-25 15:32:10 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 15:32:10 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 15:32:10 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 15:32:17 warnings.py 99 [py.warnings] WARNING: E:\study\soft\pycharm\PyCharm Community Edition 2018.2.3\helpers\pydev\_pydevd_bundle\pydevd_resolver.py:166: ScrapyDeprecationWarning: Crawler.spiders is deprecated, use CrawlerRunner.spider_loader or instantiate scrapy.spiderloader.SpiderLoader with your settings.
+  attr = getattr(var, n)
+
+2019-01-25 16:06:51 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 16:06:51 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 16:06:51 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 16:06:56 middleware.py 53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy_net_work.extensions.MysqlUtil']
+2019-01-25 16:06:56 _legacy.py 154 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-01-25 16:06:56 _legacy.py 154 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "E:\study\soft\anaconda\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "E:\study\soft\anaconda\lib\site-packages\scrapy\crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "E:\study\soft\anaconda\lib\site-packages\scrapy\crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "E:\study\soft\anaconda\lib\site-packages\scrapy\core\engine.py", line 69, in __init__
+    self.downloader = downloader_cls(crawler)
+  File "E:\study\soft\anaconda\lib\site-packages\scrapy\core\downloader\__init__.py", line 88, in __init__
+    self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+  File "E:\study\soft\anaconda\lib\site-packages\scrapy\middleware.py", line 58, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "E:\study\soft\anaconda\lib\site-packages\scrapy\middleware.py", line 36, in from_settings
+    mw = mwcls.from_crawler(crawler)
+  File "E:\study\tarena_code\AID1803\vinkon\my_crawler\scrapy_project\scrapy_net_work\scrapy_net_work\middlewares.py", line 20, in from_crawler
+    if not HttpSetProxy['HttpSetProxyEnabled']:
+KeyError: 'HttpSetProxyEnabled'
+2019-01-25 16:07:49 log.py 146 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: scrapy_net_work)
+2019-01-25 16:07:49 log.py 149 [scrapy.utils.log] INFO: Versions: lxml 4.1.0.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.3 |Anaconda, Inc.| (default, Oct 15 2017, 03:27:45) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.2.0 (OpenSSL 1.0.2l  25 May 2017), cryptography 2.0.3, Platform Windows-10-10.0.17134-SP0
+2019-01-25 16:07:49 crawler.py 38 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'scrapy_net_work', 'LOG_FILE': 'scrapy.log', 'LOG_FORMAT': '%(asctime)s %(filename)s %(lineno)s [%(name)s] %(levelname)s: %(message)s', 'NEWSPIDER_MODULE': 'scrapy_net_work.spiders', 'SPIDER_MODULES': ['scrapy_net_work.spiders']}
+2019-01-25 16:07:52 middleware.py 53 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy_net_work.extensions.MysqlUtil']
+2019-01-25 16:07:54 middleware.py 53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-25 16:07:54 middleware.py 53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-25 16:07:54 middleware.py 53 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-01-25 16:07:54 engine.py 256 [scrapy.core.engine] INFO: Spider opened
+2019-01-25 16:07:54 logstats.py 48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-25 16:08:00 extensions.py 52 [root] INFO: 连接数据库
+2019-01-25 16:08:00 telnet.py 60 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-01-25 16:08:00 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/4/> (referer: None)
+2019-01-25 16:08:00 engine.py 238 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mzitu.com/xinggan/page/3/> (referer: None)
+2019-01-25 16:08:06 scraper.py 237 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.mzitu.com/xinggan/page/4/>
+{'image_urls': ['https://i.meizitu.net/pfiles/img/lazy.png']}
+2019-01-25 16:08:10 scraper.py 237 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.mzitu.com/xinggan/page/3/>
+{'image_urls': ['https://i.meizitu.net/pfiles/img/lazy.png']}
+2019-01-25 16:08:10 engine.py 295 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-01-25 16:08:10 extensions.py 63 [root] INFO: 关闭数据库连接
+2019-01-25 16:08:10 statscollectors.py 47 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 454,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 11494,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 1, 25, 8, 8, 10, 590023),
+ 'item_scraped_count': 2,
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 9,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2019, 1, 25, 8, 7, 54, 401210)}
+2019-01-25 16:08:10 engine.py 326 [scrapy.core.engine] INFO: Spider closed (finished)
